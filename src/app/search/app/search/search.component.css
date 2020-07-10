@@ -1,0 +1,92 @@
+#search {
+  width: 50%;
+  height: 50px;
+
+  padding-left: 5%;
+}
+
+
+button {
+  height: 60px;
+  width: 80px;
+  font-size: 13px;
+}
+
+.btn-success {
+  margin-left: 1%;
+}
+
+.results-container {
+  height: 300px;
+}
+
+#mainDiv {
+  margin-top: 10%;
+  text-align: center;
+}
+
+
+
+#navbar-main {
+  background-color: blueviolet;
+}
+
+#f {
+   margin-top: 50px;
+  height: 100%;
+  width: 100%;
+  background-color: dimgray;
+  border: dimgray solid 1px;
+}
+
+#resultsBooks {
+  float: left;
+  margin-right: 10%;
+  border: darkgrey 1px solid;
+  height: 300px;
+  margin-bottom: 2%;
+  text-align: center;
+  width: 260px;
+}
+
+#navbar-main {
+  background-color: blueviolet;
+}
+
+#textBook {
+  border: 1px black solid;
+}
+
+#navBaar {
+  background-color: darkslateblue;
+}
+
+body {
+    background-image: url("../../../../assets/img/theme/Essential-Books.jpg"); 
+   background-color: darkslategray !important; 
+}
+
+/* .emptyDiv {
+    height: 100px;
+} */
+
+
+.container {
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.card {
+  float: left;
+ margin-right: 3px;
+margin-bottom: 5px;
+width: 300px;
+  height: 90% !important
+}
+
+.card-img-top {
+  height: 100%;
+}
+
+

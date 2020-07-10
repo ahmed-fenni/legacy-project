@@ -6,7 +6,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./home.component";
-import { NavbarComponent } from "../shared/navbar/navbar.component";
+import { NavbarComponent } from "./navbar.component";
 // import {NavbarComponent} from '../shared/navbar/navbar.component';
 
 @NgModule({

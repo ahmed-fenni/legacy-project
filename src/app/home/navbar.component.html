@@ -1,10 +1,10 @@
 <nav
   id="navbar-main"
-  class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned"
+  class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned "
 >
   <div class="container">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
-      <span class="title h3 my-4 text-white" id="bakabaka"> BakaBook </span>
+      <span class="title h3 my-4 text-white"> BakaBook </span>
     </a>
     <button
       class="navbar-toggler"
@@ -23,7 +23,9 @@
       <div class="navbar-collapse-header">
         <div class="row">
           <div class="col-6 collapse-brand">
-            <a [routerLink]="['/home']"> </a>
+            <a [routerLink]="['/home']">
+              <img src="./assets/img/brand/blue.png" />
+            </a>
           </div>
           <div class="col-6 collapse-close">
             <button
@@ -40,19 +42,18 @@
         </div>
       </div>
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+       
         <li class="nav-item dropdown">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text" id="bakaprofile">Profile</span>
+            <span class="nav-link-inner--text">Join</span>
           </a>
-          <div class="dropdown-menu" id="droplog">
+          <div class="dropdown-menu">
             <!-- <a [routerLink]="['/user-profile']" class="dropdown-item"
               >Profile</a
             > -->
-            <a [routerLink]="['/user-profile']" class="dropdown-item"
-              >See Profil</a
-            >
-            <a [routerLink]="['/register']" class="dropdown-item">LogOut</a>
+            <a [routerLink]="['/login']" class="dropdown-item">Login</a>
+            <a [routerLink]="['/register']" class="dropdown-item">Register</a>
           </div>
         </li>
       </ul>
@@ -109,74 +110,3 @@
     </div>
   </div>
 </nav>
-
-<!-- Card -->
-<center>
-  <div class="card">
-    <!-- Card image -->
-    <img
-      class="card-img-top"
-      src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
-      alt="Card image cap"
-    />
-
-    <!-- Card content -->
-    <div class="card-body">
-      <!-- Title -->
-      <h4 class="card-title"><a> Title:</a>now you see me</h4>
-      <!-- Text -->
-      <h4>Author:</h4>
-      <p class="card-text">
-        fhfh
-      </p>
-      <h4>Type:</h4>
-      <p class="card-text">horor</p>
-      <h4>Description:</h4>
-      <p class="card-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-        veniam ullam soluta, voluptatum fugiat aliquid qui dolorem veritatis
-        quaerat, quis facere nobis! Maiores magnam dolore perferendis totam sed
-        nisi ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Ducimus, at dolore cum itaque vel, officiis hic, esse odit natus
-        voluptate inventore deleniti assumenda qui quas necessitatibus tempore
-        voluptatum facere et. Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Ipsa repellendus non consequuntur repudiandae eum,
-        modi quis nulla aspernatur animi officia nisi, aliquid officiis sint
-        reiciendis magni deserunt, hic nam ducimus!
-      </p>
-    </div>
-  </div>
-</center>
-
-<div class="container">
-  <div class="row">
-    <div class="control-group" id="fields">
-      <div class="controls">
-        <form role="form" autocomplete="off">
-          <div class="entry input-group col-xs-3">
-            <input
-              id="commentarea"
-              class="form-control"
-              name="fields[]"
-              type="text"
-              placeholder="Type something"
-            />
-            <span class="input-group-btn">
-              <button
-                class="btn btn-success btn-add"
-                (click)="generate()"
-                type="button"
-              >
-                ADD comment
-              </button>
-            </span>
-          </div>
-        </form>
-        <br />
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Card -->

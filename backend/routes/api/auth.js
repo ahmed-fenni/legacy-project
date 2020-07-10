@@ -17,9 +17,10 @@ router.post("/", (req, res) => {
     return res.status(400).json({ msg: "please enter all fields" });
   }
 
-  //check for existing user
+  //check for existing user 
+  //changed from handeling the log in
   User.findOne({ email }).then((user) => {
-    if (!user) return res.status(400).json({ msg: "user does not exist" });
+    if (!user) return res.send({ msg: "user does not exist" });
 
     // validate password :
     bcrypt.compare(password, user.password).then((isMatch) => {

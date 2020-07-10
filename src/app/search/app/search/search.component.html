@@ -1,0 +1,106 @@
+
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color" id="navBaar">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">BakaBook</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">LogOut</a>
+      </li>
+
+      <!-- Dropdown -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+
+    </ul>
+    <!-- Links -->
+
+    <form class="form-inline">
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </form>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+<div id="mainDiv">
+  <input
+    type="search"
+    placeholder="Search Books by name or ISBN"
+    #search
+    id="search"
+  />
+  <button (click)="OnSearch(search.value)" class='btn-success'>Search</button>
+</div>
+
+<div class="emptyDiv"></div>
+<div *ngIf="books" id="f">
+  <div class="container">
+    
+    <div class="card"  *ngFor="let book of books"
+    [routerLink]="[
+      '/search',
+      book.volumeInfo.industryIdentifiers[0].identifier
+    ]">
+    <p *ngIf="book.volumeInfo.imageLinks">
+      <img class="card-img-top" src="{{ book.volumeInfo.imageLinks.smallThumbnail }}" alt="Card image">
+      </p>
+      <div class="card-body">
+        
+        <p class="card-text">{{ book.volumeInfo.title }}</p>
+        
+      </div>
+    </div>
+
+    <!-- <div
+      class="card"
+      *ngFor="let book of books"
+      [routerLink]="[
+        '/search',
+        book.volumeInfo.industryIdentifiers[0].identifier
+      ]"
+      id="resultsBooks"
+    >
+    <p *ngIf="book.volumeInfo.imageLinks">
+      <img src="{{ book.volumeInfo.imageLinks.smallThumbnail }}" class="card-img-top" />
+    </p>
+    <div class="card-text">
+      {{ book.volumeInfo.title }}
+    </div>
+    </div> -->
+  </div>
+</div>
+</body>
+
+

@@ -25,9 +25,15 @@ export class LoginComponent implements OnInit {
 
     return this.http
       .post("http://localhost:8080/api/auth", user)
-      .subscribe((res) => console.log(res));
-
-    // var usersignup = ajax("http://localhost:8080/api/users");
-    // usersignup.subscribe((res) => console.log(res.status, res.response));
+      .subscribe((res) => {
+        let error = JSON.stringify({ msg: "user does not exist" });
+        console.log(JSON.stringify(res), error);
+        if (JSON.stringify(res) === error) {
+          console.log("invalid password or e mail");
+          return false;
+        } else {
+          return true;
+        }
+      });
   }
 }
