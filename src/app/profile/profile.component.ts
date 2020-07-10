@@ -14,7 +14,7 @@ import {
 @Component({
   selector: "app-profile",
   templateUrl: "./profile.component.html",
-  styleUrls: ["./profile.component.scss"],
+  styleUrls: ["./profile.component.css"],
   animations: [
   
   ]
@@ -22,13 +22,13 @@ import {
 export class ProfileComponent {
   selectedFile: File;
   configUrl = "http://localhost:8080/uploade";
-  image = "./assets/img/theme/team-4-800x800.jpg";
+  image = "./assets/img/theme/no-profile-picture.jpg";
   div1=false;
   data ={
-  fullname : "hmed",
-  age : 0,
-  town : "ghazela",
-  occupation : "zazar"
+  fullname : "user",
+  age : 99,
+  town : "from",
+  occupation : "work"
   }
   constructor(private http: HttpClient) {}
 
@@ -58,9 +58,9 @@ export class ProfileComponent {
 
     return this.http.post(this.configUrl, uploadData).subscribe((data: any) => {
       console.log(data);
-      let x = "./src/assets/img/theme/" + data.myPath
+      let x = "./assets/img/theme/" + "myFile-1594319779446.jpg"
       console.log(x)
-      setTimeout(()=>{this.image = x },3000);
+      setTimeout(()=>{this.image = x },1500);
       
     });
   }
